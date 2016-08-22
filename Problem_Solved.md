@@ -1,15 +1,18 @@
 ## Problem Solved ##
 ### Spark Configuration ###
-1. SparkConf' object has no attribute '_get_object_id' when using sc = pyspark.SparkContext(conf)   
+1. SparkConf' object has no attribute '_get_object_id' when using sc = pyspark.SparkContext(conf)
+2. 
 	```
 	conf = SparkConf().setAppName('test_spark_configuration')
 	sc = pyspark.SparkContext(conf) 
 	```
+	
 	* ref: [How to change SparkContext properties in Interactive PySpark session](http://stackoverflow.com/questions/32362783/how-to-change-sparkcontext-properties-in-interactive-pyspark-session)
 	* fixed
-	```
-	sc = pyspark.SparkContext(conf=conf) 
-	```
+	
+		```
+		sc = pyspark.SparkContext(conf=conf) 
+		```
 
 [ 阅读Spark排错与优化](http://blog.csdn.net/lsshlsw/article/details/49155087)
 [ Spark On YARN内存分配](http://blog.javachen.com/2015/06/09/memory-in-spark-on-yarn.html)
