@@ -1,10 +1,10 @@
 ## Problem Solved ##
 ### Spark Configuration ###
 1. SparkConf' object has no attribute '_get_object_id' when using sc = pyspark.SparkContext(conf)   
-	'''
+	```
 	conf = SparkConf().setAppName('test_spark_configuration')
 	sc = pyspark.SparkContext(conf) 
-	'''
+	```
 	* ref: [How to change SparkContext properties in Interactive PySpark session](http://stackoverflow.com/questions/32362783/how-to-change-sparkcontext-properties-in-interactive-pyspark-session)
 	* fixed
 	```
