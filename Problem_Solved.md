@@ -29,7 +29,7 @@
 
 * Lost task Error communicating with MapOutputTracker
 	* [ Re: Error communicating with MapOutputTracker from mail-archives.apache.org](https://mail-archives.apache.org/mod_mbox/spark-user/201505.mbox/%3CCAGHU-i0L9VBxM+auAi4XDECchaLurvUPaJa_MZXc+mAq_2JjAg@mail.gmail.com%3E)
-			* increase spark.akka.askTimeout, I used --conf spark.network.timeout=300 to fix the this issue.
+		* increase spark.akka.askTimeout, I used --conf spark.network.timeout=300 to fix the this issue.
 
 * org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location
 	* [ Spark Shuffle FetchFailedException解决方案](http://blog.csdn.net/lsshlsw/article/details/51213610)
