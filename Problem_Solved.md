@@ -47,7 +47,6 @@
 4. Map output statuses can still exceed spark.akka.frameSize
 Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 	* [Map output statuses can still exceed spark.akka.frameSize](https://issues.apache.org/jira/browse/SPARK-5077)
-		* 
 	* [ Spark broadcast error: exceeds spark.akka.frameSize Consider using broadcast](http://stackoverflow.com/questions/27218472/spark-broadcast-error-exceeds-spark-akka-framesize-consider-using-broadcast)
 	* [ Apache spark message understanding](http://stackoverflow.com/questions/26904619/apache-spark-message-understanding)
 	* [ 设置spark.akka.frameSize不生效](http://wenda.chinahadoop.cn/question/3120#!answer_form)
