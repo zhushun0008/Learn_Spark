@@ -33,6 +33,10 @@
 	* [ Spark Shuffle FetchFailedException解决方案](http://blog.csdn.net/lsshlsw/article/details/51213610)
 	* [ using MEMORY_AND_DISK from stackoverflow](http://stackoverflow.com/questions/28901123/org-apache-spark-shuffle-metadatafetchfailedexception-missing-an-output-locatio)
 	* [increase spark.yarn.executor.memoryOverhead from mail-archives.apache.org](https://mail-archives.apache.org/mod_mbox/spark-user/201502.mbox/%3CCAHentsTnKrdbKaFF2oRJTM26TViGacgVr9mFbovSdLM1ikWHYQ@mail.gmail.com%3E)
+	* [ job keeps failing with org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 1](http://mail-archives.us.apache.org/mod_mbox/spark-user/201502.mbox/%3CCAHentsTnKrdbKaFF2oRJTM26TViGacgVr9mFbovSdLM1ikWHYQ@mail.gmail.com%3E)
+	* [ Memory leak](https://issues.apache.org/jira/browse/SPARK-4996)
+	* [ org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 0 in stackoverflow](http://stackoverflow.com/questions/28901123/org-apache-spark-shuffle-metadatafetchfailedexception-missing-an-output-locatio)
+	* [ Spark Shuffle FetchFailedException解决方案](http://blog.csdn.net/lsshlsw/article/details/51213610)
 
 
 2. pyspark l列出hdfs文件
@@ -50,8 +54,4 @@ Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 	* [ 设置spark.akka.frameSize不生效](http://wenda.chinahadoop.cn/question/3120#!answer_form)
 	* [ Fixing Spark](http://tech.grammarly.com/blog/posts/Petabyte-Scale-Text-Processing-with-Spark.html)
 
-* org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location
-	* [ job keeps failing with org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 1](http://mail-archives.us.apache.org/mod_mbox/spark-user/201502.mbox/%3CCAHentsTnKrdbKaFF2oRJTM26TViGacgVr9mFbovSdLM1ikWHYQ@mail.gmail.com%3E)
-	* [ Memory leak](https://issues.apache.org/jira/browse/SPARK-4996)
-	* [ org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 0 in stackoverflow](http://stackoverflow.com/questions/28901123/org-apache-spark-shuffle-metadatafetchfailedexception-missing-an-output-locatio)
-	* [ Spark Shuffle FetchFailedException解决方案](http://blog.csdn.net/lsshlsw/article/details/51213610)
+
