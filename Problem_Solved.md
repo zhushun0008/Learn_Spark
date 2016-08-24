@@ -20,18 +20,18 @@
 [ Spark On YARN内存分配](http://blog.javachen.com/2015/06/09/memory-in-spark-on-yarn.html)
 [ 理解RDD](http://blog.csdn.net/bluejoe2000/article/details/41415087)
 [ Spark源码系列讲解](http://www.uml.org.cn/wenzhang/artsearch.asp?curpage=1)
-* Uncaught fatal error from thread [sparkDriver-akka.remote.default-remote-dispatcher-8] shutting down ActorSystem [sparkDriver] java.lang.OutOfMemoryError: Java heap space
+1. Uncaught fatal error from thread [sparkDriver-akka.remote.default-remote-dispatcher-8] shutting down ActorSystem [sparkDriver] java.lang.OutOfMemoryError: Java heap space
 	* [ parkDriver throwing java.lang.OutOfMemoryError: Java heap space](https://mail-archives.apache.org/mod_mbox/spark-user/201604.mbox/%3CCA+e75uvb+E93U53RxOoxpnPOik914G8g2ed0q=esuzcqyzmu2A@mail.gmail.com%3E)
 	* [ Java heap space Error while running SVMWithSGD algorithm in MLlib](http://stackoverflow.com/questions/31916017/java-heap-space-error-while-running-svmwithsgd-algorithm-in-mllib)
 	* [ SparkSql OutOfMemoryError](http://apache-spark-user-list.1001560.n3.nabble.com/SparkSql-OutOfMemoryError-td17468.html)
 	* [java.lang.OutOfMemoryError: Java heap space with RandomForest](https://issues.apache.org/jira/browse/SPARK-5743)
 	* [ scala spark编程常见问题总结](http://blog.csdn.net/sivolin/article/details/47105655)
 
-* Lost task Error communicating with MapOutputTracker
+2. Lost task Error communicating with MapOutputTracker
 	* [ Re: Error communicating with MapOutputTracker from mail-archives.apache.org](https://mail-archives.apache.org/mod_mbox/spark-user/201505.mbox/%3CCAGHU-i0L9VBxM+auAi4XDECchaLurvUPaJa_MZXc+mAq_2JjAg@mail.gmail.com%3E)
 		* increase spark.akka.askTimeout, I used --conf spark.network.timeout=300 to fix the this issue.
 
-* org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location
+3. org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location
 	* [ Spark Shuffle FetchFailedException解决方案](http://blog.csdn.net/lsshlsw/article/details/51213610)
 	* [ using MEMORY_AND_DISK from stackoverflow](http://stackoverflow.com/questions/28901123/org-apache-spark-shuffle-metadatafetchfailedexception-missing-an-output-locatio)
 	* [increase spark.yarn.executor.memoryOverhead from mail-archives.apache.org](https://mail-archives.apache.org/mod_mbox/spark-user/201502.mbox/%3CCAHentsTnKrdbKaFF2oRJTM26TViGacgVr9mFbovSdLM1ikWHYQ@mail.gmail.com%3E)
@@ -41,13 +41,10 @@
 	* [ Spark Shuffle FetchFailedException解决方案](http://blog.csdn.net/lsshlsw/article/details/51213610)
 
 
-2. pyspark l列出hdfs文件
 
+4. [Problems solved of running spark](https://github.com/AllenFang/spark-overflow/blob/master/README.md)
 
-
-5. [Problems solved of running spark](https://github.com/AllenFang/spark-overflow/blob/master/README.md)
-
-6. Map output statuses can still exceed spark.akka.frameSize
+5. Map output statuses can still exceed spark.akka.frameSize
 Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 	* [Map output statuses can still exceed spark.akka.frameSize](https://issues.apache.org/jira/browse/SPARK-5077)
 		* 
@@ -57,7 +54,7 @@ Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 	* [ Fixing Spark](http://tech.grammarly.com/blog/posts/Petabyte-Scale-Text-Processing-with-Spark.html)
 
 
-### java.io.IOException: Unable to acquire 67108864 bytes of memory
+5.  java.io.IOException: Unable to acquire 67108864 bytes of memory
 Disable the tungsten execution engine.
 http://alvincjin.blogspot.com/2016/01/unable-to-acquire-bytes-of-memory.html
 
