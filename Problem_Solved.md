@@ -20,6 +20,7 @@
 [ Spark On YARN内存分配](http://blog.javachen.com/2015/06/09/memory-in-spark-on-yarn.html)
 [ 理解RDD](http://blog.csdn.net/bluejoe2000/article/details/41415087)
 [ Spark源码系列讲解](http://www.uml.org.cn/wenzhang/artsearch.asp?curpage=1)
+
 1. Uncaught fatal error from thread [sparkDriver-akka.remote.default-remote-dispatcher-8] shutting down ActorSystem [sparkDriver] java.lang.OutOfMemoryError: Java heap space
 	* [ parkDriver throwing java.lang.OutOfMemoryError: Java heap space](https://mail-archives.apache.org/mod_mbox/spark-user/201604.mbox/%3CCA+e75uvb+E93U53RxOoxpnPOik914G8g2ed0q=esuzcqyzmu2A@mail.gmail.com%3E)
 	* [ Java heap space Error while running SVMWithSGD algorithm in MLlib](http://stackoverflow.com/questions/31916017/java-heap-space-error-while-running-svmwithsgd-algorithm-in-mllib)
@@ -40,8 +41,6 @@
 	* [ org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 0 in stackoverflow](http://stackoverflow.com/questions/28901123/org-apache-spark-shuffle-metadatafetchfailedexception-missing-an-output-locatio)
 	* [ Spark Shuffle FetchFailedException解决方案](http://blog.csdn.net/lsshlsw/article/details/51213610)
 
-
-
 4. [Problems solved of running spark](https://github.com/AllenFang/spark-overflow/blob/master/README.md)
 
 5. Map output statuses can still exceed spark.akka.frameSize
@@ -55,6 +54,6 @@ Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 
 
 6.  java.io.IOException: Unable to acquire 67108864 bytes of memory
-* Disable the tungsten execution engine.
-* http://alvincjin.blogspot.com/2016/01/unable-to-acquire-bytes-of-memory.html
-* [Seems to be only a issue for spark 1.5](https://issues.apache.org/jira/browse/SPARK-10309#userconsent)
+	* Disable the tungsten execution engine.
+	* http://alvincjin.blogspot.com/2016/01/unable-to-acquire-bytes-of-memory.html
+	* [Seems to be only a issue for spark 1.5](https://issues.apache.org/jira/browse/SPARK-10309#userconsent)
