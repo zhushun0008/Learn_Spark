@@ -1,7 +1,7 @@
 ## Problem Solved ##
 ### Spark Configuration ###
 1. SparkConf' object has no attribute '_get_object_id' when using sc = pyspark.SparkContext(conf)
-2. 
+
 	```
 	conf = SparkConf().setAppName('test_spark_configuration')
 	sc = pyspark.SparkContext(conf) 
@@ -13,6 +13,7 @@
 		```
 		sc = pyspark.SparkContext(conf=conf) 
 		```
+
 ### Optimization
 
 [ 阅读Spark排错与优化](http://blog.csdn.net/lsshlsw/article/details/49155087)
