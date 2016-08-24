@@ -54,7 +54,6 @@ Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 
 
 5.  java.io.IOException: Unable to acquire 67108864 bytes of memory
-	* Disable the tungsten execution engine.
-	* http://alvincjin.blogspot.com/2016/01/unable-to-acquire-bytes-of-memory.html
+	* [Disable the tungsten execution engine] http://alvincjin.blogspot.com/2016/01/unable-to-acquire-bytes-of-memory.html
 	* [Seems to be only a issue for spark 1.5](https://issues.apache.org/jira/browse/SPARK-10309#userconsent)
 
