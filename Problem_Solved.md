@@ -57,3 +57,4 @@ Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 	* [ Fixing Spark](http://tech.grammarly.com/blog/posts/Petabyte-Scale-Text-Processing-with-Spark.html)
 
 
+### java.io.IOException: Unable to acquire 67108864 bytes of memory
