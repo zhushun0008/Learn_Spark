@@ -16,6 +16,7 @@
 
 ### Optimization
 #### Resource
+* [ Spark1.0.x入门指南 ](http://www.cnblogs.com/Scott007/p/3849677.html)
 * [ 阅读Spark排错与优化](http://blog.csdn.net/lsshlsw/article/details/49155087)
 * [ Spark On YARN内存分配](http://blog.javachen.com/2015/06/09/memory-in-spark-on-yarn.html)
 * [ 理解RDD](http://blog.csdn.net/bluejoe2000/article/details/41415087)
