@@ -8,3 +8,8 @@
 [Corresponding Codes in bitbucket](https://bitbucket.org/zhushun0008/datascienceengineeringwithspark)
 
 ## 2. Spark Configuration ##
+
+
+## Other Resources
+* [美团-Spark性能优化指南——基础篇](http://tech.meituan.com/spark-tuning-basic.html)
+* [美团-Spark性能优化指南——高级篇](http://tech.meituan.com/spark-tuning-pro.html)
