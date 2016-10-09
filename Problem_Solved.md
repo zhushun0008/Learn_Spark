@@ -64,7 +64,7 @@ Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 	* use similar to map_side_join to fix this problem
 		* use a dictionary to store the small table and broadcast it
 		* use map or filter operations to process the big table with key in dictionary
-		* *** In conclusion: Use map side to bypass the shuffle stage and use dictionary instead for loop to speed up the process***
+		* In conclusion: ***Use map side to bypass the shuffle stage and use dictionary instead for loop to speed up the process***
 	```
 	def filter_map_side_join(temp_row, m):
 		return m.get(temp_row[0], False)
