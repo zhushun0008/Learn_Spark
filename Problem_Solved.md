@@ -58,3 +58,5 @@ Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 	* [Disable the tungsten execution engine](http://alvincjin.blogspot.com/2016/01/unable-to-acquire-bytes-of-memory.html)
 	* [Seems to be only a issue for spark 1.5](https://issues.apache.org/jira/browse/SPARK-10309#userconsent)
 
+6. ERROR cluster.YarnScheduler: Lost executor xxxxxx remote Rpc client disassociated
+try this ```--conf spark.yarn.executor.memoryOverhead=600``` in [How to prevent Spark Executors from getting Lost when using YARN client mode?](http://stackoverflow.com/questions/31728688/how-to-prevent-spark-executors-from-getting-lost-when-using-yarn-client-mode) but not work and 
