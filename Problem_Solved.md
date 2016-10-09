@@ -54,9 +54,20 @@ Use spark-submit --conf spark.akka.frameSize=200 (set 200M for frameSize)
 	* [ Fixing Spark](http://tech.grammarly.com/blog/posts/Petabyte-Scale-Text-Processing-with-Spark.html)
 
 
-5.  java.io.IOException: Unable to acquire 67108864 bytes of memory
+5. java.io.IOException: Unable to acquire 67108864 bytes of memory
 	* [Disable the tungsten execution engine](http://alvincjin.blogspot.com/2016/01/unable-to-acquire-bytes-of-memory.html)
 	* [Seems to be only a issue for spark 1.5](https://issues.apache.org/jira/browse/SPARK-10309#userconsent)
 
 6. ERROR cluster.YarnScheduler: Lost executor xxxxxx remote Rpc client disassociated
-try this ```--conf spark.yarn.executor.memoryOverhead=600``` in [How to prevent Spark Executors from getting Lost when using YARN client mode?](http://stackoverflow.com/questions/31728688/how-to-prevent-spark-executors-from-getting-lost-when-using-yarn-client-mode) but not work and 
+***Problem***: when join the big table with a small table(about 40,000 records) and error occurs
+	* try this ```--conf spark.yarn.executor.memoryOverhead=600``` in [How to prevent Spark Executors from getting Lost when using YARN client mode?](http://stackoverflow.com/questions/31728688/how-to-prevent-spark-executors-from-getting-lost-when-using-yarn-client-mode) but not work 
+	* use similar to map_side_join to fix this problem
+		* use a dictionary to store the small table and broadcast it
+		* use map or filter operations to process the big table with key in dictionary
+		* *** In conclusion: Use map side to bypass the shuffle stage and use dictionary instead for loop to speed up the process***
+	```
+	def filter_map_side_join(temp_row, m):
+		return m.get(temp_row[0], False)
+
+	rdd_selected_mother_user_log_within_duation = repartition_valid_rdd_user_pin_with_log_within_duation.filter(lambda temp_row: filter_map_side_join(temp_row, select_user_dict_broadcast.value)).map(lambda one_data: one_data[1])
+	```
